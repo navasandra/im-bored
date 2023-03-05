@@ -1,0 +1,13 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper p {
+  width: 100%;
+  text-align: center;
+  color: #4b4b4b;
+  font-size: 5em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+}

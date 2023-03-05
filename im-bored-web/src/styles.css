@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #4b4b4b;
+  --secondary-dark: #3f638b;
+  --secondary-light: #d1f5ff;
+}
+
+.activities-button {
+  background-color: var(--secondary-dark);
+  align-self: center;
+  border: 3px var(--primary);
+  border-radius: 5px;
+  color: var(--secondary-light);
+  padding: 15px 32px;
+  width: fit-content;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

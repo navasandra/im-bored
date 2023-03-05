@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+  <div class="activity-details">
+    <div class="info-block">
+      <span>Activity: </span>
+      <span>{{ activity.activity }}</span>
+    </div>
+    <div class="info-block">
+      <span>Type: </span>
+      <span>{{ activity.type }}</span>
+    </div>
+    <div class="info-block">
+      <span>Number of participants: </span>
+      <span>{{ activity.participants }}</span>
+    </div>
+    <div class="info-block">
+      <span>Price: </span>
+      <span>{{ activity.price }}</span>
+    </div>
+    <div class="info-block">
+      <span>Accessibility: </span>
+      <span>{{ activity.accessibility }}</span>
+    </div>
+    <div class="info-block">
+      <span>Link: </span>
+      <span>{{ activity.link }}</span>
+    </div>
+    <div class="info-block" *ngIf="fromSelectedList">
+      <span>Comments: </span>
+      <span>{{ activity.comment }}</span>
+    </div>
+  </div>
+  <div class="confirmation-buttons" *ngIf="showAddSkipButtons">
+    <button class="confirmation-button" (click)="addActivity.emit(activity)">
+      Sounds good to me!
+    </button>
+    <button class="rejection-button" (click)="skipActivity.emit()">
+      Naah, that's not for me!
+    </button>
+  </div>
+  <div *ngIf="fromSelectedList" class="confirmation-buttons">
+    <button class="confirmation-button" (click)="editActivity.emit(activity)">
+      Edit
+    </button>
+    <button class="rejection-button" (click)="deleteActivity.emit(activity)">
+      Remove from my list.
+    </button>
+  </div>
+</div>

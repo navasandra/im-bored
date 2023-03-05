@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+  <div class="activities">
+    <button class="activities-button" (click)="getRandomActivity()">
+      Give me a random activity
+    </button>
+    <ng-container *ngIf="activityIsSelected">
+      <app-activity-card
+        [activity]="selectedActivity"
+        (skipActivity)="getRandomActivity()"
+        (addActivity)="addActivity($event)"
+      ></app-activity-card>
+    </ng-container>
+    <button class="show-activities-button" (click)="getMyActivities()">
+      Show my activities
+    </button>
+  </div>
+  <ng-container *ngIf="showTable && activitiesList.length !== 0">
+    <div class="cards-container">
+      <div *ngFor="let activity of activitiesList">
+        <app-activity-card
+          [activity]="activity"
+          [showAddSkipButtons]="false"
+          [fromSelectedList]="true"
+          (deleteActivity)="deleteActivity($event)"
+          (editActivity)="editActivity($event)"
+        ></app-activity-card>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="showTable && activitiesList.length == 0">
+    <p>You dont have any activities saved!</p>
+  </ng-container>
+  <ng-container *ngIf="showDialog">
+    <p-dialog [(visible)]="showDialog">
+      <app-edit-form
+        [activityToEdit]="activityToEdit"
+        (closeDialog)="showDialog = false"
+        (updateActivity)="updateActivity($event)"
+      ></app-edit-form>
+    </p-dialog>
+  </ng-container>
+</div>

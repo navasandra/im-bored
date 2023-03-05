@@ -1,0 +1,38 @@
+:root {
+  --primary: #4b4b4b;
+  --secondary-dark: #3f638b;
+  --secondary-light: #d1f5ff;
+}
+
+.content-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.info-block {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  gap: 5px;
+}
+
+.confirmation-button {
+  width: fit-content;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.rejection-button {
+  width: fit-content;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

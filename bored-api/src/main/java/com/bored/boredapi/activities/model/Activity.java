@@ -1,6 +1,6 @@
 package com.bored.boredapi.activities.model;
 
-public class ActivityDAO {
+public class Activity {
 
 	private String activity;
 
@@ -16,11 +16,13 @@ public class ActivityDAO {
 
 	private Double accessibility;
 
-	public ActivityDAO() {
+	private String comment;
+
+	public Activity() {
 	};
 
-	public ActivityDAO(String activity, String type, Integer participants, Double price, String link, String key,
-			Double accessibility) {
+	public Activity(String activity, String type, Integer participants, Double price, String link, String key,
+			Double accessibility, String comment) {
 		this.activity = activity;
 		this.type = type;
 		this.participants = participants;
@@ -28,6 +30,7 @@ public class ActivityDAO {
 		this.link = link;
 		this.key = key;
 		this.accessibility = accessibility;
+		this.comment = comment;
 	};
 
 	public String getActivity() {
@@ -84,6 +87,14 @@ public class ActivityDAO {
 
 	public void setAccessibility(Double accessibility) {
 		this.accessibility = accessibility;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 }

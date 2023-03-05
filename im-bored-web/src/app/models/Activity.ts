@@ -1,4 +1,4 @@
-export interface ActivityDAO {
+export interface Activity {
   activity: string;
   type: string;
   participants: number;
@@ -6,4 +6,5 @@ export interface ActivityDAO {
   link: string;
   key: string;
   accessibility: number;
+  comment: string;
 }
