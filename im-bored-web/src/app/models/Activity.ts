@@ -1,4 +1,5 @@
 export interface Activity {
+  activityId: number;
   activity: string;
   type: string;
   participants: number;

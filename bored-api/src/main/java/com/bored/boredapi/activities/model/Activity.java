@@ -2,6 +2,7 @@ package com.bored.boredapi.activities.model;
 
 public class Activity {
 
+	private Integer activityId;
 	private String activity;
 
 	private String type;
@@ -21,8 +22,9 @@ public class Activity {
 	public Activity() {
 	};
 
-	public Activity(String activity, String type, Integer participants, Double price, String link, String key,
-			Double accessibility, String comment) {
+	public Activity(Integer activityId, String activity, String type, Integer participants, Double price, String link,
+			String key, Double accessibility, String comment) {
+		this.activityId = activityId;
 		this.activity = activity;
 		this.type = type;
 		this.participants = participants;
@@ -95,6 +97,14 @@ public class Activity {
 
 	public void setComment(String comment) {
 		this.comment = comment;
+	}
+
+	public Integer getActivityId() {
+		return activityId;
+	}
+
+	public void setActivityId(Integer activityId) {
+		this.activityId = activityId;
 	}
 
 }

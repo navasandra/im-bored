@@ -26,6 +26,7 @@ export class EditFormComponent implements OnChanges {
   @Input() activityToEdit: Activity = {} as Activity;
   @Output() closeDialog = new EventEmitter<boolean>();
   @Output() updateActivity = new EventEmitter<Activity>();
+  activityId: number = 0;
 
   form = new FormGroup({
     activity: new FormControl<string>({ value: '', disabled: true }),
@@ -46,6 +47,7 @@ export class EditFormComponent implements OnChanges {
 
   setData(activity: Activity): void {
     this.form.reset();
+    this.activityId = activity.activityId;
     this.form.controls.activity.setValue(activity.activity);
     this.form.controls.type.setValue(activity.type);
     this.form.controls.participants.setValue(activity.participants);
@@ -58,6 +60,7 @@ export class EditFormComponent implements OnChanges {
 
   saveActivity(): void {
     const activity = {
+      activityId: this.activityId,
       activity: this.form.controls.activity.value as string,
       type: this.form.controls.type.value as string,
       participants: this.form.controls.participants.value as number,
