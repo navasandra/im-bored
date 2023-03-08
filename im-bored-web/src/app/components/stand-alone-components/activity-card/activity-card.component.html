@@ -29,19 +29,19 @@
       <span>{{ activity.comment }}</span>
     </div>
   </div>
-  <div class="confirmation-buttons" *ngIf="showAddSkipButtons">
-    <button class="confirmation-button" (click)="addActivity.emit(activity)">
+  <div class="action-buttons-wrapper" *ngIf="showAddSkipButtons">
+    <button class="action-button" (click)="addActivity.emit(activity)">
       Sounds good to me!
     </button>
-    <button class="rejection-button" (click)="skipActivity.emit()">
+    <button class="action-button" (click)="skipActivity.emit()">
       Naah, that's not for me!
     </button>
   </div>
-  <div *ngIf="fromSelectedList" class="confirmation-buttons">
-    <button class="confirmation-button" (click)="editActivity.emit(activity)">
+  <div *ngIf="fromSelectedList" class="action-buttons-wrapper">
+    <button class="action-button" (click)="editActivity.emit(activity)">
       Edit
     </button>
-    <button class="rejection-button" (click)="deleteActivity.emit(activity)">
+    <button class="action-button" (click)="deleteActivity.emit(activity)">
       Remove from my list.
     </button>
   </div>

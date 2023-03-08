@@ -3,6 +3,7 @@ package com.bored.boredapi.activities.model;
 public class Activity {
 
 	private Integer activityId;
+
 	private String activity;
 
 	private String type;

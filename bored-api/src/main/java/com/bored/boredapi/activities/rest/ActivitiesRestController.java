@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bored.boredapi.activities.model.Activity;
-import com.bored.boredapi.logic.ActivityService;
+import com.bored.boredapi.activities.service.ActivityService;
 
 @RestController
 @RequestMapping(path = "/bored-api/activities")

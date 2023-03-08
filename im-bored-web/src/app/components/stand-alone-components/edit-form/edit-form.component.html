@@ -27,10 +27,8 @@
     <label for="comment">comment</label>
     <input type="text" id="comment" formControlName="comment" />
   </div>
-  <div class="form-buttons-wrapper">
-    <button class="confirmation-button" (click)="saveActivity()">
-      confirm
-    </button>
-    <button class="rejection-button" (click)="closeDialog.emit()">close</button>
+  <div class="action-buttons-wrapper">
+    <button class="action-button" (click)="saveActivity()">Confirm</button>
+    <button class="action-button" (click)="closeDialog.emit()">Close</button>
   </div>
 </form>
